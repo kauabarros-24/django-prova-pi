@@ -1,13 +1,12 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
-from alunos.views import EstadoViewSet, AlunoViewSet, CidadeViewSet
+from pedidos.views import ClienteViewSet, PedidoViewSet, ItensPedidoViewSet
 
 router = DefaultRouter()
-router.register(r'estados', EstadoViewSet)
-router.register(r'cidades', CidadeViewSet)
-router.register(r'alunos', AlunoViewSet)
-
+router.register(r'clientes', ClienteViewSet)
+router.register(r'pedidos', PedidoViewSet)
+router.register(r'itens_pedido', ItensPedidoViewSet)
 
 
 urlpatterns = [
